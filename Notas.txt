@@ -2,3 +2,7 @@ Iniciar el servidor virtual en una Terminal en VSC con: "npm start"
 el servidor local corre en "localhost:4200" en el explorador
 crear un componente nuevo de Angular con el comando "ng generate component" o mas corto "ng g c"
 añadir cada componente de la pag, luego del comando, en la carpeta "components/" + lo que se quiera añadir
+
+pendientes:
+crear una nueva rama ("develope" o algun nombre asi) en el Git para trabajar en el desarrollo de la pag
+cambiar la imagen del baner por una de mayor resolucion
