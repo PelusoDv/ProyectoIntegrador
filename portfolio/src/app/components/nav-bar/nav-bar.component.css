@@ -1,5 +1,5 @@
 nav{
-    background-color: #AED6F1;
+    background-color: #59c4c4;
 }
 
 #APlogo {
@@ -17,4 +17,12 @@ a{
 
 img {
     width: 40px;
+}
+
+button {
+    margin-left: 3px;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
 }
