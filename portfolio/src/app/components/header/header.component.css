@@ -1,10 +1,23 @@
-div{
-    margin-top: 50px;
-    padding-top: 10px;
+.container-fluid{
+    width: 99%;
+    margin: 60px 0px 10px 8px;
     background-color: whitesmoke;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: silver;
 }
 
-img {
+#banner {
     width: 100%;
-    border-radius: 8px 8px 0 0;
+    padding: 0%;
+    border-radius: 24px 24px 0 0;
+}
+
+#profile {
+    border-radius: 100%;
+    margin: 10px 0;
+}
+
+#datosPers {
+    margin: 15px 0;
 }
