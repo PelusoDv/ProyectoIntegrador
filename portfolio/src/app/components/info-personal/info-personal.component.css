@@ -1,0 +1,8 @@
+.container-fluid{
+    width: 99%;
+    margin: 8px 0px 10px 8px;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: silver;
+}
