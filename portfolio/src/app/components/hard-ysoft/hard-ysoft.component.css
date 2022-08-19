@@ -1,0 +1,14 @@
+.container-fluid{
+    width: 99%;
+    margin: 8px 0px 10px 8px;
+    padding: 15px 20px 10px 20px;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: silver;
+}
+
+h3 {
+    padding-bottom: 15px;
+}

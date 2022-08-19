@@ -7,6 +7,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { InfoPersonalComponent } from './components/info-personal/info-personal.component';
 import { ExperienciaEstudiosComponent } from './components/experiencia-estudios/experiencia-estudios.component';
+import { HardYSoftComponent } from './components/hard-ysoft/hard-ysoft.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { ExperienciaEstudiosComponent } from './components/experiencia-estudios/
     HeaderComponent,
     InfoPersonalComponent,
     ExperienciaEstudiosComponent,
+    HardYSoftComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
