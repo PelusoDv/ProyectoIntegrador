@@ -1,0 +1,9 @@
+.container-fluid{
+    padding: 10px 20px 20px 20px;
+    color: #0e1f1f;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 2px;
+}
