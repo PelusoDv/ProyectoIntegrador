@@ -21,6 +21,7 @@ img {
 
 button {
     margin-left: 3px;
+    border-width: 2px;
 }
 
 .navbar-collapse {
