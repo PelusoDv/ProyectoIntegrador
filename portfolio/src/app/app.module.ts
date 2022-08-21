@@ -9,6 +9,8 @@ import { InfoPersonalComponent } from './components/info-personal/info-personal.
 import { ExperienciaEstudiosComponent } from './components/experiencia-estudios/experiencia-estudios.component';
 import { HardYSoftComponent } from './components/hard-ysoft/hard-ysoft.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     InfoPersonalComponent,
     ExperienciaEstudiosComponent,
     HardYSoftComponent,
+    ProyectosComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
