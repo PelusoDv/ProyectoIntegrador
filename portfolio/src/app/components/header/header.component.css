@@ -17,7 +17,7 @@
 
 #profile {
     border-radius: 50%;
-    transition: border-radius 3.2s;
+    transition: border-radius 1.2s;
     margin: 15px 0;
     box-shadow: 5px 5px 5px darkgrey;
 }
