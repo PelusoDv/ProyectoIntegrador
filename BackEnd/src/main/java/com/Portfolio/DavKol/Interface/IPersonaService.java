@@ -6,7 +6,7 @@ import java.util.List;
 
 
 public interface IPersonaService {
-    //LLamar a la lista de Personas
+    //LLamar a la lista de Usuarios
     public List<Persona> getPersona();
     
     //Guardar un nuevo Usuario
