@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonaService } from 'src/app/service/persona.service';
-import { persona } from 'src/model/persona.model';
+import { persona } from 'src/app/components/model/persona.model';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,7 @@ import { persona } from 'src/model/persona.model';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  persona: persona = new persona("", "","");
+  persona: persona = new persona("", "", "");
 
   constructor(public personaService: PersonaService) { }
 

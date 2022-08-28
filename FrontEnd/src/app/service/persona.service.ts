@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
-import { persona } from 'src/model/persona.model';
+import { Observable } from 'rxjs';
+import { persona } from 'src/app/components/model/persona.model';
 
 @Injectable({
   providedIn: 'root'
