@@ -1,5 +1,5 @@
 
-package com.Portfolio.DavKol.Security.dto;
+package com.Portfolio.DavKol.Security.Dto;
 
 import javax.validation.constraints.NotBlank;
 

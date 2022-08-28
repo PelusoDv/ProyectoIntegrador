@@ -1,4 +1,4 @@
-package com.Portfolio.DavKol.Security.dto;
+package com.Portfolio.DavKol.Security.Dto;
 
 import java.util.HashSet;
 import java.util.Set;

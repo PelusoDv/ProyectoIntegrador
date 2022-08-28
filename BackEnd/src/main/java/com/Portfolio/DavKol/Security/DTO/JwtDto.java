@@ -1,4 +1,4 @@
-package com.Portfolio.DavKol.Security.dto;
+package com.Portfolio.DavKol.Security.Dto;
 
 import org.springframework.security.core.GrantedAuthority;
 import java.util.Collection;
