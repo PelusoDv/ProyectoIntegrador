@@ -7,19 +7,21 @@
   
               <h2 class="mb-2">LOGIN</h2>
               <h5 class="mb-5">Ingresar usuario y contraseña</h5>
-  
-              <div class="form-outline mb-4">
-                <input type="email" id="typeEmailX-2" class="form-control form-control-lg" placeholder="Usuario"/>
-              </div>
-  
-              <div class="form-outline mb-4">
-                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" placeholder="Contraseña" />
-              </div>
 
-              <p class="small mb-3 pb-lg-2"><a class="text-white-50" href="#!">¿Olvidaste tu contraseña?</a></p>
+              <form #F="ngForm" (ngSubmit)="onLogin()" novalidate>
+                <div class="form-outline mb-4">
+                  <input type="text" id="nombreUsuario" name="nombreUsuario" for="nombreUsuario" class="form-control form-control-lg" placeholder="Usuario" [(ngModel)]="nombreUsuario" required/>
+                </div>
     
-              <button class="btn btn-outline-light btn-lg btn-block" type="submit">Login</button>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" name="password" for="password" class="form-control form-control-lg" placeholder="Contraseña" [(ngModel)]="password" required />
+                </div>
   
+                <p class="small mb-3 pb-lg-2"><a class="text-white-50" href="#!">¿Olvidaste tu contraseña?</a></p>
+      
+                <button class="btn btn-outline-light btn-lg btn-block" type="submit">Login</button>
+              </form>
+              
               <hr class="my-4">
   
               <div>

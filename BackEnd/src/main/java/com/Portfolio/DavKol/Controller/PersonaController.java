@@ -5,6 +5,7 @@ import com.Portfolio.DavKol.Entity.Persona;
 import com.Portfolio.DavKol.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,18 +28,21 @@ public class PersonaController {
         return ipersonaService.getPersona();
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/usuario/crear")
     public String createPersona(@RequestBody Persona persona){
         ipersonaService.savePersona(persona);
         return "El Usuario se creo correctamente";
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/usuario/borrar/{id}")
     public String deletePersona(@PathVariable Long id) {
         ipersonaService.deletePersona(id);
         return "El Usuario fue borrado correctamente";
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/usuario/edit/{id}")
     public Persona editPersona(@PathVariable Long id,
                                @RequestParam("nombre") String nuevoNombre,

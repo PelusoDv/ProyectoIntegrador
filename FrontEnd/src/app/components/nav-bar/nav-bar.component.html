@@ -18,9 +18,9 @@
           <a href="https://www.instagram.com/nico_dv15/"><img src="/assets/instagram.png"></a>
           <a href="https://www.linkedin.com/in/nicol%C3%A1s-d%C3%A1valos-585015158/"><img src="/assets/linkedin.png"></a>
           <a href="/login">
-            <button type="button" class="btn btn-outline-light">LOGIN</button>
+            <button type="button" class="btn btn-outline-light" *ngIf="!isLogged">INICIAR SESION</button> 
           </a>
-          
+          <button type="button" class="btn btn-outline-light" (click)="onLogout()" *ngIf="isLogged">CERRAR SESION</button>  
         </div>
       </div>
     </div>
