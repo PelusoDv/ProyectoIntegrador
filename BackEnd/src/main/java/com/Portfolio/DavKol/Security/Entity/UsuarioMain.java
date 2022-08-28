@@ -1,58 +1,54 @@
-package com.Portfolio.DavKol.Security.Entity;
+package com.Portfolio.DavKol.Security.entity;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
-public class UsuarioPrincipal implements UserDetails {
+public class UsuarioMain implements UserDetails {
 
     private String nombre;
-    private String userName;
+    private String usuario;
     private String email;
     private String password;
     private Collection<? extends GrantedAuthority> authorities;
 
     //Constructor
-    public UsuarioPrincipal(String nombre, String userName, String email, String password, Collection<? extends GrantedAuthority> authorities) {
+    public UsuarioMain(String nombre, String usuario, String email, String password, Collection<? extends GrantedAuthority> authorities) {
         this.nombre = nombre;
-        this.userName = userName;
+        this.usuario = usuario;
         this.email = email;
         this.password = password;
         this.authorities = authorities;
     }
 
-    public static UsuarioPrincipal build(Usuario usuario) {
-        List<GrantedAuthority> authorities = usuario.getRoles().stream()
-                .map(rol -> new SimpleGrantedAuthority(rol.getRolName().name()))
+    //Metodo que asigna los privilegios (autorización)
+    public static UsuarioMain build(Usuario usuario){
+        //Convertimos la clase Rol a la clase GrantedAuthority
+        List<GrantedAuthority> authorities =
+                usuario.getRoles()
+                        .stream()
+                        .map(rol -> new SimpleGrantedAuthority(rol.getRolNombre().name()))
                 .collect(Collectors.toList());
-        return new UsuarioPrincipal(usuario.getNombre(), usuario.getUserName(), usuario.getPassword(),
-                 usuario.getEmail(), authorities);
+        return new UsuarioMain(usuario.getNombre(), usuario.getUsuario(), usuario.getEmail(),
+                usuario.getPassword(), authorities);
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return authorities;
     }
-    
-    public String getNombre() {
-        return nombre;
-    }
-    
+
     @Override
     public String getPassword() {
         return password;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
     @Override
     public String getUsername() {
-        return userName;
+        return usuario;
     }
 
     @Override
@@ -73,5 +69,13 @@ public class UsuarioPrincipal implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }

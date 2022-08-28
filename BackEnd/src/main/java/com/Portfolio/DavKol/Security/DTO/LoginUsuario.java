@@ -1,21 +1,21 @@
 
-package com.Portfolio.DavKol.Security.DTO;
+package com.Portfolio.DavKol.Security.dto;
 
 import javax.validation.constraints.NotBlank;
 
 public class LoginUsuario {
+
     @NotBlank
-    private String userName;
+    private String nombreUsuario;
     @NotBlank
     private String password;
-    
-    //Getters & Setters
-    public String getUserName() {
-        return userName;
+
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     public String getPassword() {
@@ -25,6 +25,4 @@ public class LoginUsuario {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-    
 }

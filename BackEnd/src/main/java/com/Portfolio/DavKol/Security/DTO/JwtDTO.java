@@ -1,23 +1,21 @@
-package com.Portfolio.DavKol.Security.DTO;
+package com.Portfolio.DavKol.Security.dto;
 
-import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
+import java.util.Collection;
 
-public class JwtDTO {
+public class JwtDto {
 
     private String token;
     private String bearer = "Bearer";
-    private String userName;
+    private String nombreUsuario;
     private Collection<? extends GrantedAuthority> authorities;
 
-    //Constructores
-    public JwtDTO(String token, String userName, Collection<? extends GrantedAuthority> authorities) {
+    public JwtDto(String token, String nombreUsuario, Collection<? extends GrantedAuthority> authorities) {
         this.token = token;
-        this.userName = userName;
+        this.nombreUsuario = nombreUsuario;
         this.authorities = authorities;
     }
 
-    //Getters & Setters
     public String getToken() {
         return token;
     }
@@ -34,12 +32,12 @@ public class JwtDTO {
         this.bearer = bearer;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -49,5 +47,4 @@ public class JwtDTO {
     public void setAuthorities(Collection<? extends GrantedAuthority> authorities) {
         this.authorities = authorities;
     }
-
 }

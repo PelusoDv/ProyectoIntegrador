@@ -1,25 +1,26 @@
+package com.Portfolio.DavKol.Security.service;
 
-package com.Portfolio.DavKol.Security.Service;
-
-import com.Portfolio.DavKol.Security.Entity.Rol;
-import com.Portfolio.DavKol.Security.Enums.RolName;
-import java.util.Optional;
-import javax.transaction.Transactional;
+import com.Portfolio.DavKol.Security.entity.Rol;
+import com.Portfolio.DavKol.Security.enums.RolNombre;
+import com.Portfolio.DavKol.Security.repository.RolRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.Portfolio.DavKol.Security.Repository.IRolRepository;
+
+import javax.transaction.Transactional;
+import java.util.Optional;
 
 @Service
 @Transactional
 public class RolService {
+
     @Autowired
-    IRolRepository irolRepository;
-    
-    public Optional<Rol> getByRolName(RolName rolName) {
-        return irolRepository.findByRolName(rolName);
+    RolRepository rolRepository;
+
+    public Optional<Rol> getByRolNombre(RolNombre rolNombre){
+        return  rolRepository.findByRolNombre(rolNombre);
     }
-    
-    public void save(Rol rol) {
-        irolRepository.save(rol);
+
+    public void save(Rol rol){
+        rolRepository.save(rol);
     }
 }
