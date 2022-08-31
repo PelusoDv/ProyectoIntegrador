@@ -10,12 +10,8 @@
     color: #0e1f1f;
 }
 
-table {
-    margin-left: 1em;
-}
-
 button {
-    width: inherit;
+    margin-right: 1em;
     background-color: #59c4c4;
     color: #0e1f1f;
     border-color: #0e1f1f;
@@ -34,4 +30,12 @@ button:focus {
     color: #59c4c4;
     border-color: #59c4c4;
 
+}
+
+label, button, input, textarea {
+    margin-bottom: 0.5em;
+}
+
+textarea {
+    min-height: 6em;
 }
