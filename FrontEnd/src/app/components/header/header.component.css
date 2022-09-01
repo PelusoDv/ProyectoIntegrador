@@ -1,5 +1,5 @@
 .container-fluid{
-    width: 99%;
+    width: 98%;
     margin: 60px 0px 10px 8px;
     border-radius: 25px;
     border-style: solid;
@@ -22,6 +22,32 @@
     box-shadow: 5px 5px 5px darkgrey;
 }
 
+#about {
+    position: relative;
+    left: -19%;
+    margin-right: -18%;
+    text-align: justify;
+}
+
+@media (max-width: 991px){
+    #about {
+        left: -33%;
+        margin-right: -32%;
+    }
+}
+
+@media (max-width: 576px){
+    #about {
+        left: -52%;
+        margin-right: -51%;
+    }
+}
+
+.col-4 {
+    position: relative;
+    top: -150px;
+}
+
 @media (max-width: 425px) {
     #profile {
         border-radius: 40%;
@@ -37,10 +63,41 @@
 }
 
 #datosPers {
-    margin: 20px 0;
+    margin: 3vw 0 0 0;
+}
+
+@media (max-width: 1700px) {
+    #datosPers {
+        margin: 20px 0;
+    }
 }
 
 h5 {
     font-weight: bold;
     padding-bottom: 0.6em;
+}
+
+.col-1{
+    text-align: end;
+}
+
+button {
+    width: inherit;
+    height: fit-content;
+    margin: 20px 0.5em;
+    background-color: #59c4c4;
+    color: #0e1f1f;
+    border-color: #0e1f1f;
+}
+
+button:hover {
+    background-color: #0e1f1f;
+    color: #59c4c4;
+    border-color: #59c4c4;
+}
+
+button:focus {
+    background-color: #0e1f1f;
+    color: #59c4c4;
+    border-color: #59c4c4;
 }

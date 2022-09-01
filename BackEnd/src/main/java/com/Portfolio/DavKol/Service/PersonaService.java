@@ -3,7 +3,7 @@ package com.Portfolio.DavKol.Service;
 
 import com.Portfolio.DavKol.Entity.Persona;
 import com.Portfolio.DavKol.Repository.IPersonaRepository;
-import java.util.List;
+import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,11 +14,6 @@ public class PersonaService {
     @Autowired
     IPersonaRepository ipersonaRepository;
 
-    public List<Persona> list() {
-        List<Persona> persona = ipersonaRepository.findAll();
-        return persona;
-    }
-
     public void save(Persona persona) {
         ipersonaRepository.save(persona);
     }
@@ -27,8 +22,15 @@ public class PersonaService {
         ipersonaRepository.deleteById(id);
     }
 
-    public Persona findPersona(int id) {
-        return ipersonaRepository.findById(id).orElse(null);
+    public Optional<Persona> findPersona(int id) {
+        return ipersonaRepository.findById(id);
     }
     
+    public boolean existsByTitulo(String titulo){
+        return ipersonaRepository.existsByTitulo(titulo);
+    }
+    
+    public Optional<Persona> getByTitulo(String nombreE){
+        return ipersonaRepository.getByTitulo(nombreE);
+    }
 }

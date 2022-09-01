@@ -1,13 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.Portfolio.DavKol.Dto;
 
-/**
- *
- * @author USUARIO
- */
+import javax.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter @Setter
 public class dtoPersona {
-    
+    @NotBlank
+    private String nombre;
+    @NotBlank
+    private String apellido; 
+    private String img;
+    @NotBlank
+    private String titulo;
+    @NotBlank
+    private String residencia;
+    private String descripcion;    
 }

@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NewExperienciaComponent } from './components/experiencia-estudios/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia-estudios/edit-experiencia.component';
+import { EditHeaderComponent } from './components/header/edit-header.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { EditExperienciaComponent } from './components/experiencia-estudios/edit
     LoginComponent,
     NewExperienciaComponent,
     EditExperienciaComponent,
+    EditHeaderComponent,
   ],
   imports: [
     FormsModule,

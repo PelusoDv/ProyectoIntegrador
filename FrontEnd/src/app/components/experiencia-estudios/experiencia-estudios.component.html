@@ -1,19 +1,19 @@
 <div class="container-fluid" style="overflow: auto">
     
     <div class="row">
-        <h3 class="col-9 col-sm-10 col-lg-11">Experiencia Laboral</h3>
-        <button type="button" class="btn btn-info col-2" routerLink="/nuevaexp" *ngIf="isLogged">
-            <i class="bi bi-plus-square"></i> Add</button>
+        <h3 class="col col-sm-10 col-lg-11">Experiencia Laboral</h3>
+        <button type="button" class="btn btn-info" id="add" routerLink="/nuevaexp" *ngIf="isLogged">
+            <i class="bi bi-plus-square"></i></button>
         <div>
             <table class="table">
                 <tbody>
                     <tr *ngFor="let Experiencia of expe">
                         <td><h5>{{Experiencia.nombreE}}</h5></td>
                         <td>{{Experiencia.descripcionE}}</td>
-                        <td><button type="button" class="btn btn-info col-2" routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged">
-                            <i class="bi bi-pencil-square"> Edit</i></button></td>
-                        <td><button type="button" class="btn btn-info col-2" (click)="delete(Experiencia.id)" *ngIf="isLogged">
-                            <i class="bi bi-trash3-fill"></i> Delete</button></td>
+                        <td id="btn"><button type="button" class="btn btn-info" routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged">
+                            <i class="bi bi-pencil-square"></i></button></td>
+                        <td id="btn"><button type="button" class="btn btn-info" (click)="delete(Experiencia.id)" *ngIf="isLogged">
+                            <i class="bi bi-trash3-fill"></i></button></td>
                     </tr>
                 </tbody>
             </table>

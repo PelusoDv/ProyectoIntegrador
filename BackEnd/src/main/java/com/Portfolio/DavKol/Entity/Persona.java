@@ -2,9 +2,13 @@
 package com.Portfolio.DavKol.Entity;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import lombok.Getter;
@@ -21,17 +25,28 @@ public class Persona{
     private String nombre;
     @NotNull
     @Size(min = 1, max = 32, message = "No cumple con la longitud" )
-    private String apellido;    
-    @Size(min = 1, max = 64, message = "No cumple con la longitud" )
+    private String apellido; 
     private String img;
+    @NotNull
+    /*@ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "persona_educacion", joinColumns = @JoinColumn(name = "id_persona"),
+            inverseJoinColumns = @JoinColumn(name = "educacion_id"))*/
+    private String titulo;
+    @NotNull
+    private String residencia;
+    @Size(min = 1, max = 240, message = "Max 240 caracteres")
+    private String descripcion; 
     
     //Constructores
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, String img) {
+    public Persona(String nombre, String apellido, String img, String titulo, String residencia, String descripcion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
+        this.titulo = titulo;
+        this.residencia = residencia;
+        this.descripcion = descripcion;
     }
 }
