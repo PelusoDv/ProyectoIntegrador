@@ -25,7 +25,8 @@ public class Persona{
     private String nombre;
     @NotNull
     @Size(min = 1, max = 32, message = "No cumple con la longitud" )
-    private String apellido; 
+    private String apellido;
+    @Size(min = 23, max = 510, message = "No cumple con la longitud" )
     private String img;
     @NotNull
     /*@ManyToMany(fetch = FetchType.EAGER)
@@ -35,18 +36,23 @@ public class Persona{
     @NotNull
     private String residencia;
     @Size(min = 1, max = 240, message = "Max 240 caracteres")
-    private String descripcion; 
+    private String descripcion;
+    private Long numero;
+    private String email;
     
     //Constructores
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, String img, String titulo, String residencia, String descripcion) {
+    public Persona(String nombre, String apellido, String img, String titulo, String residencia, String descripcion,
+            Long numero, String email) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
         this.titulo = titulo;
         this.residencia = residencia;
         this.descripcion = descripcion;
+        this.numero = numero;
+        this.email = email;
     }
 }

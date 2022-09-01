@@ -24,10 +24,17 @@
 
 #about {
     position: relative;
-    left: -19%;
-    margin-right: -18%;
     text-align: justify;
 }
+
+@media (max-width: 2005px) {
+    #about {
+        
+        left: -19%;
+        margin-right: -18%;
+    }
+}
+
 
 @media (max-width: 991px){
     #about {
@@ -41,6 +48,11 @@
         left: -52%;
         margin-right: -51%;
     }
+}
+
+#about button,
+#about p {
+    margin: 0 0 10px 0;
 }
 
 .col-4 {

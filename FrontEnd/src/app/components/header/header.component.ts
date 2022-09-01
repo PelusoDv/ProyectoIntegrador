@@ -10,12 +10,10 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  persona: persona = new persona("", "", "", "", "", "");
+  persona: persona = new persona("", "", "", "", "", "", null, "");
 
   constructor(public personaService: PersonaService, private tokenService: TokenService) {}
   isLogged = false;
-  isAdmin = false;
-
 
   ngOnInit(): void {
     this.cargarPersona();

@@ -41,7 +41,8 @@ public class PersonaController {
         if(personaService.existsByTitulo(dtoper.getTitulo()))
             return new ResponseEntity(new Mensaje("Ese titulo ya esxiste"), HttpStatus.BAD_REQUEST);
         
-        Persona persona = new Persona(dtoper.getNombre(), dtoper.getApellido(), dtoper.getImg(), dtoper.getTitulo(), dtoper.getResidencia(), dtoper.getDescripcion());
+        Persona persona = new Persona(dtoper.getNombre(), dtoper.getApellido(), dtoper.getImg(), dtoper.getTitulo(),
+                dtoper.getResidencia(), dtoper.getDescripcion(), dtoper.getNumero(), dtoper.getEmail());
         personaService.save(persona);
         return new ResponseEntity(new Mensaje("Persona agregada"), HttpStatus.OK);
     }
@@ -73,6 +74,8 @@ public class PersonaController {
         persona.setTitulo(dtoper.getTitulo());
         persona.setResidencia(dtoper.getResidencia());
         persona.setDescripcion(dtoper.getDescripcion());
+        persona.setNumero(dtoper.getNumero());
+        persona.setEmail(dtoper.getEmail());
         
         personaService.save(persona);
         return new ResponseEntity(new Mensaje("Datos actualizados"), HttpStatus.OK);

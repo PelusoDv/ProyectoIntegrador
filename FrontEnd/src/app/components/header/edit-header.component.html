@@ -5,34 +5,44 @@
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
 
             <div class="form-grup">
-                <label for="nombreE">Nombre:</label>
+                <label for="nombre">Nombre:</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="ditper.nombre" required>
             </div>
 
             <div class="form-grup">
-                <label for="descripcionE">Apellido:</label>
+                <label for="apellido">Apellido:</label>
                 <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="ditper.apellido" required>
             </div>
 
             <div class="form-grup">
-                <label for="descripcionE">Foto Perfil:</label>
+                <label for="img">Foto Perfil:</label>
                 <input type="text" class="form-control" id="img" name="img" [(ngModel)]="ditper.img" required>
             </div>
 
             <div class="form-grup">
-                <label for="descripcionE">Titulo:</label>
+                <label for="titulo">Titulo:</label>
                 <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="ditper.titulo" required>
             </div>
 
             <div class="form-grup">
-                <label for="descripcionE">Ciudad/Provincia:</label>
+                <label for="residencia">Ciudad/Provincia:</label>
                 <input type="text" class="form-control" id="residencia" name="residencia" [(ngModel)]="ditper.residencia" required>
             </div>
 
             <div class="form-grup">
-                <label for="descripcionE">Acerca de mi:</label>
+                <label for="descripcion">Acerca de mi:</label>
                 <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="ditper.descripcion"
                     required></textarea>
+            </div>
+
+            <div class="form-grup">
+                <label for="numero">Teléfono:</label>
+                <input type="number" class="form-control" id="numero" name="numero" [(ngModel)]="ditper.numero" required>
+            </div>
+
+            <div class="form-grup">
+                <label for="email">Correo Electronico:</label>
+                <input type="text" class="form-control" id="email" name="email" [(ngModel)]="ditper.email" required>
             </div>
 
             <button class="btn btn-info">Editar Persona</button>

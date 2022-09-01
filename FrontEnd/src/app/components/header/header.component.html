@@ -18,6 +18,11 @@
             <div id="about">
                 <h3>Acerca de Mi</h3>
                 <p>{{persona.descripcion}}</p>
+                <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Informacion de contacto</button>
+                <div class="collapse" id="collapseExample">
+                      <p>WhatsApp: "+{{persona.numero}}" /--/ e-mail: "{{persona.email}}"</p>
+                </div>
             </div>
         </div>
 

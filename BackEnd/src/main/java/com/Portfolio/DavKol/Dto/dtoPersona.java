@@ -15,5 +15,7 @@ public class dtoPersona {
     private String titulo;
     @NotBlank
     private String residencia;
-    private String descripcion;    
+    private String descripcion;
+    private Long numero;
+    private String email;
 }
