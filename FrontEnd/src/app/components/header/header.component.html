@@ -21,12 +21,12 @@
                 <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Informacion de contacto</button>
                 <div class="collapse" id="collapseExample">
-                      <p>WhatsApp: "+{{persona.numero}}" /--/ e-mail: "{{persona.email}}"</p>
+                      <p>WhatsApp: "{{persona.numero}}" /--/ e-mail: "{{persona.email}}"</p>
                 </div>
             </div>
         </div>
 
-        <button type="button" class="btn btn-info" routerLink="/editperfil/{{persona.id}}" *ngIf="isLogged">
+        <button type="button" class="btn btn-info" routerLink="/editPerfil/{{persona.id}}" *ngIf="isLogged">
             <i class="bi bi-pencil-square"></i></button>
     </div>
 

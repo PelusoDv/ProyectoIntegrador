@@ -1,27 +1,29 @@
-<div class="container-fluid">
+<div class="container-fluid" style="overflow: auto">
 
     <div class="row">
-        <h3>Proyectos Involucrado</h3>
+        <h3 class="col col-sm-10 col-lg-11">Proyectos Involucrado</h3>
+        <button type="button" class="btn btn-info" id="add" routerLink="/nuevoProy" *ngIf="isLogged">
+            <i class="bi bi-plus-square"></i></button>
 
-        <div class="col-12 col-md-8 col-lg-9">
-            <h5>Portfolio Personal #Argentina Programa - (years)</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tempora consequuntur quibusdam autem debitis, optio possimus error ipsum corporis eum? Sed velit atque facilis perspiciatis laboriosam amet consequatur veniam. Porro.</p>
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-3">
-            <a href="https://github.com/PelusoDv/ProyectoIntegrador"><img src="/assets/YoProgramo.jpg" class="img-fluid"></a>
-        </div>
-
-        <div class="col-12 col-md-8 col-lg-9">
-            <h5>Pag. comercial - GOGOGO - (years)</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et aspernatur nam sapiente saepe voluptatem libero enim ipsum eius esse, dolores voluptate delectus iusto perferendis ab non sed ipsam tenetur vitae.</p>
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-3">
-            <a href="https://github.com/Wieworki/Web-project-with-PHP"><img src="/assets/GoGoGo.jpg" class="img-fluid"></a>
+        <div>
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Proyectos of proy">
+                        <td>
+                            <h5>{{Proyectos.nombreP}}</h5>
+                        </td>
+                        <td id="desc">{{Proyectos.descripcionP}}</td>
+                        <td id="img"><a href={{Proyectos.linkP}}><img src={{Proyectos.imgP}}
+                                    class="img-fluid"></a></td>
+                        <td id="btn"><button type="button" class="btn btn-info" routerLink="/editProy/{{Proyectos.id}}"
+                                *ngIf="isLogged">
+                                <i class="bi bi-pencil-square"></i></button></td>
+                        <td id="btn"><button type="button" class="btn btn-info" (click)="deleteProy(Proyectos.id)"
+                                *ngIf="isLogged">
+                                <i class="bi bi-trash3-fill"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-
 </div>
-
-

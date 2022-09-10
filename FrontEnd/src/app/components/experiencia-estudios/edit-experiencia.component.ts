@@ -11,7 +11,9 @@ import { ExperienciaService } from 'src/app/service/experiencia.service';
 export class EditExperienciaComponent implements OnInit {
   expLab: Experiencia = null;
 
-  constructor(private experienciaService: ExperienciaService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private experienciaService: ExperienciaService, 
+    private activatedRoute: ActivatedRoute, 
+    private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];

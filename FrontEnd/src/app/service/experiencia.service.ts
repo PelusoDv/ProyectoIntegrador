@@ -17,11 +17,11 @@ export class ExperienciaService {
   }
 
   public detail(id: number): Observable<Experiencia> {
-    return this.http.get<Experiencia>(this.URL+ `/detail/${id}`);
+    return this.http.get<Experiencia>(this.URL+`/detail/${id}`);
   }
 
   public save(experiencia: Experiencia): Observable<any> {
-    return this.http.post<any>(this.URL + '/create', experiencia);
+    return this.http.post<any>(this.URL+'/create', experiencia);
   }
 
   public update(id: number, experiencia: Experiencia): Observable<any> {

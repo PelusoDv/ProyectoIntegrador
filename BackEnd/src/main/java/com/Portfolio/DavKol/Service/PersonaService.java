@@ -30,7 +30,7 @@ public class PersonaService {
         return ipersonaRepository.existsByTitulo(titulo);
     }
     
-    public Optional<Persona> getByTitulo(String nombreE){
-        return ipersonaRepository.getByTitulo(nombreE);
+    public Optional<Persona> getByTitulo(String titulo){
+        return ipersonaRepository.getByTitulo(titulo);
     }
 }

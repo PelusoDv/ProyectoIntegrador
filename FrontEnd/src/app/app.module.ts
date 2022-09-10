@@ -16,6 +16,10 @@ import { LoginComponent } from './components/login/login.component';
 import { NewExperienciaComponent } from './components/experiencia-estudios/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia-estudios/edit-experiencia.component';
 import { EditHeaderComponent } from './components/header/edit-header.component';
+import { NewEducacionComponent } from './components/experiencia-estudios/new-educacion.component';
+import { EditEducacionComponent } from './components/experiencia-estudios/edit-educacion.component';
+import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
+import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
 
 
 @NgModule({
@@ -32,6 +36,10 @@ import { EditHeaderComponent } from './components/header/edit-header.component';
     NewExperienciaComponent,
     EditExperienciaComponent,
     EditHeaderComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    NewProyectosComponent,
+    EditProyectosComponent,
   ],
   imports: [
     FormsModule,

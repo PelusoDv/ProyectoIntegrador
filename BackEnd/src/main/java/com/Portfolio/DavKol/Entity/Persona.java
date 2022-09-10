@@ -2,13 +2,9 @@
 package com.Portfolio.DavKol.Entity;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import lombok.Getter;
@@ -29,9 +25,6 @@ public class Persona{
     @Size(min = 23, max = 510, message = "No cumple con la longitud" )
     private String img;
     @NotNull
-    /*@ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "persona_educacion", joinColumns = @JoinColumn(name = "id_persona"),
-            inverseJoinColumns = @JoinColumn(name = "educacion_id"))*/
     private String titulo;
     @NotNull
     private String residencia;

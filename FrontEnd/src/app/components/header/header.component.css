@@ -15,49 +15,16 @@
     border-radius: 24px 24px 0 0;
 }
 
+.col-4 {
+    position: relative;
+    top: -150px;
+}
+
 #profile {
     border-radius: 50%;
     transition: border-radius 1.2s;
     margin: 15px 0;
     box-shadow: 5px 5px 5px darkgrey;
-}
-
-#about {
-    position: relative;
-    text-align: justify;
-}
-
-@media (max-width: 2005px) {
-    #about {
-        
-        left: -19%;
-        margin-right: -18%;
-    }
-}
-
-
-@media (max-width: 991px){
-    #about {
-        left: -33%;
-        margin-right: -32%;
-    }
-}
-
-@media (max-width: 576px){
-    #about {
-        left: -52%;
-        margin-right: -51%;
-    }
-}
-
-#about button,
-#about p {
-    margin: 0 0 10px 0;
-}
-
-.col-4 {
-    position: relative;
-    top: -150px;
 }
 
 @media (max-width: 425px) {
@@ -72,6 +39,38 @@
         border-radius: 20%;
         transition: border-radius 0.8s;
     }
+}
+
+#about {
+    position: relative;
+    text-align: justify;
+}
+
+@media (max-width: 2005px) {
+    #about {
+        left: -19%;
+        margin-right: -18%;
+    }
+}
+
+
+@media (max-width: 991px){
+    #about {
+        left: -33%;
+        margin-right: -32%;
+    }
+}
+
+@media (max-width: 575px){
+    #about {
+        left: -52%;
+        margin-right: -51%;
+    }
+}
+
+#about button,
+#about p {
+    margin: 0 0 10px 0;
 }
 
 #datosPers {
