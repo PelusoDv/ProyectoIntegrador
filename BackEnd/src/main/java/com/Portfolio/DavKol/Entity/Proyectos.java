@@ -16,9 +16,9 @@ public class Proyectos {
     private int id;
     private String nombreP;
     private String descripcionP;
-    @Size(max = 510, message = "No cumple con la longitud" )
+    @Size(max = 510)
     private String imgP;
-    @Size(max = 510, message = "No cumple con la longitud" )
+    @Size(max = 510)
     private String linkP;
     
     //Constructores 

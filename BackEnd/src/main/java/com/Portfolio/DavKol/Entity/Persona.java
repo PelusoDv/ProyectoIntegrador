@@ -17,12 +17,12 @@ public class Persona{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @NotNull
-    @Size(min = 1, max = 24, message = "No cumple con la longitud" )
+    @Size(max = 24, message = "No cumple con la longitud")
     private String nombre;
     @NotNull
-    @Size(min = 1, max = 32, message = "No cumple con la longitud" )
+    @Size(max = 32, message = "No cumple con la longitud")
     private String apellido;
-    @Size(min = 23, max = 510, message = "No cumple con la longitud" )
+    @Size(min = 23, max = 510)
     private String img;
     @NotNull
     private String titulo;

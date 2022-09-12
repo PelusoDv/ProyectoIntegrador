@@ -64,6 +64,8 @@ public class ExperienciaController {
             return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(dtoexp.getNombreE()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
+        if(StringUtils.isBlank(dtoexp.getDescripcionE()))
+            return new ResponseEntity(new Mensaje("Descripcion obligatoria"), HttpStatus.BAD_REQUEST);
          
         Experiencia experiencia = experienciaService.getOne(id).get();
         experiencia.setNombreE(dtoexp.getNombreE());

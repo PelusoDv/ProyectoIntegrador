@@ -10,6 +10,25 @@
     color: #0e1f1f;
 }
 
-h3 {
-    padding-bottom: 15px;
+button {
+    width: auto;
+    margin-inline-start: auto;
+    background-color: #59c4c4;
+    color: #0e1f1f;
+    border-color: #0e1f1f;
+
+}
+
+button:hover {
+    background-color: #0e1f1f;
+    color: #59c4c4;
+    border-color: #59c4c4;
+
+}
+
+button:focus {
+    background-color: #0e1f1f;
+    color: #59c4c4;
+    border-color: #59c4c4;
+
 }

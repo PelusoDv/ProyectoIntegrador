@@ -1,149 +1,21 @@
 <div class="container-fluid">
 
-    <h3>Hard & Soft Skills</h3>
-
     <div class="row">
 
-        <div class="text-center col-sm-6 col-md-4">
-            <circle-progress
-                [percent]="95"
-                [radius]="100"
-                [title]="'HTML'"
-                [titleColor]="'#0e1f1f'"
-                [showUnits]="false"
-                [showSubtitle]="false"
-                [titleFontSize]="'1.8em'"
-                [outerStrokeWidth]="10"
-                [innerStrokeWidth]="5"
-                [outerStrokeColor]="'#59c4c4'"
-                [innerStrokeColor]="'darkgrey'"
-                [animation]="true"
-                [animationDuration]="400"
-            ></circle-progress>
-        </div>
-        <div class="text-center col-sm-6 col-md-4">
-            <circle-progress
-                [percent]="80"
-                [radius]="100"
-                [title]="'CSS'"
-                [titleColor]="'#0e1f1f'"
-                [showUnits]="false"
-                [showSubtitle]="false"
-                [titleFontSize]="'1.8em'"
-                [outerStrokeWidth]="10"
-                [innerStrokeWidth]="5"
-                [outerStrokeColor]="'#59c4c4'"
-                [innerStrokeColor]="'darkgrey'"
-                [animation]="true"
-                [animationDuration]="400"
-            ></circle-progress>
-        </div>
-        <div class="text-center col-sm-6 col-md-4">
-            <circle-progress
-                [percent]="70"
-                [radius]="100"
-                [title]="'JavaScript'"
-                [titleColor]="'#0e1f1f'"
-                [showUnits]="false"
-                [showSubtitle]="false"
-                [titleFontSize]="'1.8em'"
-                [outerStrokeWidth]="10"
-                [innerStrokeWidth]="5"
-                [outerStrokeColor]="'#59c4c4'"
-                [innerStrokeColor]="'darkgrey'"
-                [animation]="true"
-                [animationDuration]="400"
-            ></circle-progress>
-        </div>
-        <div class="text-center col-sm-6 col-md-4">
-            <circle-progress
-                [percent]="80"
-                [radius]="100"
-                [title]="'Bootstrap'"
-                [titleColor]="'#0e1f1f'"
-                [showUnits]="false"
-                [showSubtitle]="false"
-                [titleFontSize]="'1.8em'"
-                [outerStrokeWidth]="10"
-                [innerStrokeWidth]="5"
-                [outerStrokeColor]="'#59c4c4'"
-                [innerStrokeColor]="'darkgrey'"
-                [animation]="true"
-                [animationDuration]="400"
-            ></circle-progress>
-        </div>
-        <div class="text-center col-sm-6 col-md-4">
-            <circle-progress
-                [percent]="85"
-                [radius]="100"
-                [title]="'GitHub'"
-                [titleColor]="'#0e1f1f'"
-                [showUnits]="false"
-                [showSubtitle]="false"
-                [titleFontSize]="'1.8em'"
-                [outerStrokeWidth]="10"
-                [innerStrokeWidth]="5"
-                [outerStrokeColor]="'#59c4c4'"
-                [innerStrokeColor]="'darkgrey'"
-                [animation]="true"
-                [animationDuration]="400"
-            ></circle-progress>
-        </div>
-        <div class="text-center col-sm-6 col-md-4">
-            <circle-progress
-                [percent]="90"
-                [radius]="100"
-                [title]="'English'"
-                [titleColor]="'#0e1f1f'"
-                [showUnits]="false"
-                [showSubtitle]="false"
-                [titleFontSize]="'1.8em'"
-                [outerStrokeWidth]="10"
-                [innerStrokeWidth]="5"
-                [outerStrokeColor]="'#59c4c4'"
-                [innerStrokeColor]="'darkgrey'"
-                [animation]="true"
-                [animationDuration]="400"
-            ></circle-progress>
-        </div>
+        <h3 class="col col-sm-10 col-lg-11">Hard & Soft Skills</h3>
+        
+        <button type="button" class="btn btn-info" id="add" routerLink="/nuevaSkill" *ngIf="isLogged">
+        <i class="bi bi-plus-square"></i></button>
 
-        <div class="text-center col-sm-6 col-md-4">
+        <div class="text-center col-sm-6 col-md-4" *ngFor="let Skills of skill">
+            <button type="button" class="btn btn-info" routerLink="/editSkill/{{Skills.id}}" *ngIf="isLogged">
+                <i class="bi bi-pencil-square"></i></button>
             <circle-progress
-                [percent]="75"
-                [radius]="100"
-                [title]="'Team-Work'"
-                [titleColor]="'#0e1f1f'"
-                [showUnits]="false"
-                [showSubtitle]="false"
-                [titleFontSize]="'1.8em'"
-                [outerStrokeWidth]="10"
-                [innerStrokeWidth]="5"
-                [outerStrokeColor]="'#59c4c4'"
-                [innerStrokeColor]="'darkgrey'"
-                [animation]="true"
-                [animationDuration]="400"
+                [percent]="(Skills.percent)"
+                [title]="(Skills.nombreS)"
             ></circle-progress>
-        </div>
-
-        <div class="text-center col-sm-6 col-md-4">
-            <circle-progress
-                [percent]="100"
-                [radius]="100"
-                [title]="'Pensamiento'"
-                [subtitle]="'Critico'"
-                [titleColor]="'#0e1f1f'"
-                [subtitleColor]="'#0e1f1f'"
-                [showUnits]="false"
-                [showSubtitle]="true"
-                [titleFontSize]="'1.7em'"
-                [subtitleFontSize]="'1.6em'"
-                [outerStrokeWidth]="10"
-                [innerStrokeWidth]="5"
-                [outerStrokeColor]="'#59c4c4'"
-                [innerStrokeColor]="'darkgrey'"
-                [animation]="true"
-                [animationDuration]="400"
-            ></circle-progress>
+            <button type="button" class="btn btn-info" (click)="deleteSkill(Skills.id)" *ngIf="isLogged">
+                <i class="bi bi-trash3-fill"></i></button>
         </div>
 
     </div>

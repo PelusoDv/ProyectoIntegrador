@@ -71,6 +71,8 @@ public class ProyectosController {
             return new ResponseEntity(new Mensaje("Ese Titulo ya existe"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(dtoproy.getNombreP()))
             return new ResponseEntity(new Mensaje("El Titulo es obligatorio"), HttpStatus.BAD_REQUEST);
+        if(StringUtils.isBlank(dtoproy.getDescripcionP()))
+            return new ResponseEntity(new Mensaje("Descripcion obligatoria"), HttpStatus.BAD_REQUEST);
         
         Proyectos proyectos = proyectosService.getOne(id).get();
         proyectos.setNombreP(dtoproy.getNombreP());

@@ -1,0 +1,29 @@
+<div class="container-fluid" *ngIf="skill">
+
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+            <div class="form-grup">
+                <label for="nombreE">Nombre de la Habilidad:</label>
+                <input type="text" class="form-control" id="nombreS" name="nombreS" [(ngModel)]="skill.nombreS" required>
+            </div>
+
+            <div class="form-grup">
+                <label for="descripcionE">Porcentaje de la misma:</label>
+                <input class="form-control" placeholder="El valor maximo es 100" id="percent" name="percent" [(ngModel)]="skill.percent"
+                    required>
+            </div>
+
+            <button class="btn btn-info">Modificar Habilidad</button>
+
+            <a href="">
+                <button type="button" class="btn btn-info">Volver</button>
+            </a>
+            
+            </form>
+
+        </div>
+    </div>
+
+</div>

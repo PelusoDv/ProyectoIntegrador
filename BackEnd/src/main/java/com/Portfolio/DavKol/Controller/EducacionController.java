@@ -71,6 +71,8 @@ public class EducacionController {
             return new ResponseEntity(new Mensaje("Ese Titulo ya existe"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(dtoedu.getNombreE()))
             return new ResponseEntity(new Mensaje("El Titulo es obligatorio"), HttpStatus.BAD_REQUEST);
+        if(StringUtils.isBlank(dtoedu.getDescripcionE()))
+            return new ResponseEntity(new Mensaje("Descripcion obligatoria"), HttpStatus.BAD_REQUEST);
         
         Educacion educacion = educacionService.getOne(id).get();
         educacion.setNombreE(dtoedu.getNombreE());

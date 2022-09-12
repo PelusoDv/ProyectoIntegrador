@@ -35,7 +35,3 @@ button:focus {
 label, button, input, textarea {
     margin-bottom: 0.5em;
 }
-
-textarea {
-    min-height: 6em;
-}

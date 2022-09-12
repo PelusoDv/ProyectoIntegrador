@@ -20,6 +20,8 @@ import { NewEducacionComponent } from './components/experiencia-estudios/new-edu
 import { EditEducacionComponent } from './components/experiencia-estudios/edit-educacion.component';
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
+import { NewSkillComponent } from './components/hard-ysoft/new-skill.component';
+import { EditSkillComponent } from './components/hard-ysoft/edit-skill.component';
 
 
 @NgModule({
@@ -40,12 +42,28 @@ import { EditProyectosComponent } from './components/proyectos/edit-proyectos.co
     EditEducacionComponent,
     NewProyectosComponent,
     EditProyectosComponent,
+    NewSkillComponent,
+    EditSkillComponent,
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({}),
+    NgCircleProgressModule.forRoot({
+      radius: 100,
+      titleColor: '#0e1f1f',
+      subtitleColor: '#0e1f1f',
+      showUnits: false,
+      showSubtitle: false,
+      titleFontSize: '1.8em',
+      subtitleFontSize: '1.6em',
+      outerStrokeWidth: 10,
+      innerStrokeWidth: 5,
+      outerStrokeColor: '#59c4c4',
+      innerStrokeColor: 'darkgrey',
+      animation: true,
+      animationDuration: 400     
+    }),
     HttpClientModule,
   ],
   providers: [],
