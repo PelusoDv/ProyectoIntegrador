@@ -9,5 +9,6 @@ public class dtoEducacion {
     @NotBlank
     private String nombreE;
     @NotBlank
-    private String descripcionE; 
+    private String descripcionE;
 }
+
