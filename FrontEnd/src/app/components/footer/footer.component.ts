@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
+import 'moment/locale/es-mx';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor() { 
+  }
 
   ngOnInit(): void {
+    let time = function() {
+      document.getElementById('time').innerHTML = moment().format('LL') + ' - ' + moment().format('LTS') + ' hs'; 
+    } 
+    setInterval(time, 1000);
   }
 
 }
