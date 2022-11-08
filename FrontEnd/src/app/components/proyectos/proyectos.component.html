@@ -7,13 +7,13 @@
 
         <div>
             <table class="table">
-                <tbody>
-                    <tr *ngFor="let Proyectos of proy">
+                <tbody *ngFor="let Proyectos of proy">
+                    <tr>
                         <td>
                             <h5>{{Proyectos.nombreP}}</h5>
                         </td>
                         <td id="desc">{{Proyectos.descripcionP}}</td>
-                        <td id="img"><a href={{Proyectos.linkP}}><img src={{Proyectos.imgP}}
+                        <td id="img-highRes"><a href={{Proyectos.linkP}}><img src={{Proyectos.imgP}}
                                     class="img-fluid"></a></td>
                         <td id="btn"><button type="button" class="btn btn-info" routerLink="/editProy/{{Proyectos.id}}"
                                 *ngIf="isLogged">
@@ -21,6 +21,10 @@
                         <td id="btn"><button type="button" class="btn btn-info" (click)="deleteProy(Proyectos.id)"
                                 *ngIf="isLogged">
                                 <i class="bi bi-trash3-fill"></i></button></td>
+                    </tr>
+                    <tr id="img-lowRes">
+                        <td><a href={{Proyectos.linkP}}><img src={{Proyectos.imgP}}
+                            class="img-fluid"></a></td>
                     </tr>
                 </tbody>
             </table>
