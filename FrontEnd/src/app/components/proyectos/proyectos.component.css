@@ -22,15 +22,15 @@
 }
 
 #img-lowRes {
-    display: none;
+    display:table;
+    width: 200%;
+    max-width: 400px;
+    min-width: 150px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     #img-lowRes {
-        display: block;
-        width: 200%;
-        max-width: 400px;
-        min-width: 150px;
+        display: none;
     }
 }
 
