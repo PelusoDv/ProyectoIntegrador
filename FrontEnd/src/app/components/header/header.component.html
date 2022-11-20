@@ -13,12 +13,13 @@
         <div class="col" id="datosPers">
             
             <h5>{{persona.apellido}}, {{persona.nombre}}</h5>
-            <p>{{persona.titulo}}</p>
-            <p>{{persona.residencia}}</p>
+            <h4>{{persona.titulo}}</h4>
+            <h4>{{persona.residencia}}</h4>
             <div id="about">
+                <hr class="solid">
                 <h3>Acerca de Mi</h3>
                 <p>{{persona.descripcion}}</p>
-                <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <button id="btn" type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                     Informacion de contacto</button>
                 <div class="collapse" id="collapseExample">
                       <p>WhatsApp: "{{persona.numero}}" /--/ e-mail: "{{persona.email}}"</p>
