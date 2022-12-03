@@ -7,7 +7,7 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-  URL = 'https://portfolio-dvkl.herokuapp.com/proy';
+  URL = 'https://proyectointegrador-production.up.railway.app/proy';
 
   constructor(private http: HttpClient) { }
 

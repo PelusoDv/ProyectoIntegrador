@@ -7,7 +7,7 @@ import { Educacion } from '../model/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'https://portfolio-dvkl.herokuapp.com/educ';
+  URL = 'https://proyectointegrador-production.up.railway.app/educ';
 
   constructor(private http: HttpClient) { }
 
