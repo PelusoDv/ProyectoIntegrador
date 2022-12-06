@@ -1,15 +1,15 @@
 <div class="container-fluid" style="overflow: auto">
     
     <div class="row">
-        <h3 class="col col-sm-10 col-lg-11">Experiencia Laboral</h3>
+        <h4 class="col col-sm-10 col-lg-11">Experiencia Laboral</h4>
         <button type="button" class="btn btn-info" id="add" routerLink="/nuevaExp" *ngIf="isLogged">
             <i class="bi bi-plus-square"></i></button>
         <div>
             <table class="table">
                 <tbody>
                     <tr *ngFor="let Experiencia of expe">
-                        <td><h5>{{Experiencia.nombreE}}</h5></td>
-                        <td>{{Experiencia.descripcionE}}</td>
+                        <td id="name"><h5>{{Experiencia.nombreE}}</h5></td>
+                        <td id="dsc"><p>{{Experiencia.descripcionE}}</p></td>
                         <td id="btn"><button type="button" class="btn btn-info" routerLink="/editExp/{{Experiencia.id}}" *ngIf="isLogged">
                             <i class="bi bi-pencil-square"></i></button></td>
                         <td id="btn"><button type="button" class="btn btn-info" (click)="deleteExp(Experiencia.id)" *ngIf="isLogged">
@@ -21,15 +21,15 @@
     </div>
    
     <div class="row">
-        <h3 class="col col-sm-10 col-lg-11">Educacion</h3>
+        <h4 class="col col-sm-10 col-lg-11">Educacion</h4>
         <button type="button" class="btn btn-info" id="add" routerLink="/nuevaEdu" *ngIf="isLogged">
             <i class="bi bi-plus-square"></i></button>
         <div>
             <table class="table">
                 <tbody>
                     <tr *ngFor="let Educacion of edu">
-                        <td><h5>{{Educacion.nombreE}}</h5></td>
-                        <td>{{Educacion.descripcionE}}</td>
+                        <td id="name"><h5>{{Educacion.nombreE}}</h5></td>
+                        <td id="dsc"><p>{{Educacion.descripcionE}}</p></td>
                         <td id="btn"><button type="button" class="btn btn-info" routerLink="/editEdu/{{Educacion.id}}" *ngIf="isLogged">
                             <i class="bi bi-pencil-square"></i></button></td>
                         <td id="btn"><button type="button" class="btn btn-info" (click)="deleteEdu(Educacion.id)" *ngIf="isLogged">

@@ -13,11 +13,12 @@
     width: 100%;
     padding: 0%;
     border-radius: 24px 24px 0 0;
+    object-fit: cover;
+    max-height: 70vh;
 }
 
 .col-4 {
-    position: relative;
-    top: -150px;
+    max-height: 10vh;
 }
 
 #profile {
@@ -32,6 +33,10 @@
         border-radius: 40%;
         transition: border-radius 0.8s;
     }
+    .col-4 {
+        position: relative;
+        top: 50px;
+    }
 }
 
 @media (max-width: 390px) {
@@ -44,13 +49,8 @@
 #about {
     position: relative;
     text-align: justify;
-}
-
-@media (max-width: 2005px) {
-    #about {
-        left: -19%;
-        margin-right: -18%;
-    }
+    left: -19%;
+    margin-right: -18%;
 }
 
 @media (max-width: 991px){
@@ -60,7 +60,7 @@
     }
 }
 
-@media (max-width: 575px){
+@media (max-width: 576px){
     #about {
         left: -52%;
         margin-right: -51%;
@@ -82,14 +82,18 @@
     }
 }
 
-h5 {
+h4 {
     font-weight: bold;
     padding-bottom: 0.6em;
-    font-size: 175%;
+    font-size: calc(0.3rem + 2.25vmax);
 }
 
-h3 {
-    text-align: center;
+h5 {
+    font-size: calc(0.4rem + 1.5vmax);
+}
+
+p {
+    font-size: calc(0.65rem + .7vmax);
 }
 
 .collapse {
@@ -125,6 +129,7 @@ button {
 
 #btn {
     float: right;
+    font-size: calc(.65rem + .71vmax);
 }
 
 @media (max-width: 576px) {

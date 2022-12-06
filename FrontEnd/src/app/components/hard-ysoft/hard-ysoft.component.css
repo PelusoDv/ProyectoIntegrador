@@ -10,6 +10,10 @@
     color: #0e1f1f;
 }
 
+h4 {
+    font-size: calc(0.3rem + 2.25vmax);
+}
+
 button {
     width: auto;
     margin-inline-start: auto;

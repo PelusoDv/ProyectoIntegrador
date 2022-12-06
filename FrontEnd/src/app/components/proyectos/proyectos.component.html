@@ -1,7 +1,7 @@
 <div class="container-fluid" style="overflow: auto">
 
     <div class="row">
-        <h3 class="col col-sm-10 col-lg-11">Proyectos Involucrado</h3>
+        <h4 class="col col-sm-10 col-lg-11">Proyectos Involucrado</h4>
         <button type="button" class="btn btn-info" id="add" routerLink="/nuevoProy" *ngIf="isLogged">
             <i class="bi bi-plus-square"></i></button>
 
@@ -9,7 +9,7 @@
             <table class="table">
                 <tbody *ngFor="let Proyectos of proy">
                     <tr>
-                        <td>
+                        <td id="name">
                             <h5>{{Proyectos.nombreP}}</h5>
                         </td>
                         <td id="desc">{{Proyectos.descripcionP}}</td>

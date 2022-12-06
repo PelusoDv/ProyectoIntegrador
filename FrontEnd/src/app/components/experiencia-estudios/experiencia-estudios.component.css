@@ -14,9 +14,30 @@ table {
     margin-left: 1em;
 }
 
+#name {
+    width: 35%;
+}
+
+#dsc {
+    width: 65%;
+}
+
+h4 {
+    font-size: calc(0.3rem + 2.25vmax);
+}
+
+h5 {
+    font-size: calc(0.4rem + 1.5vmax);
+}
+
+p {
+    font-size: calc(0.65rem + .7vmax);
+}
+
 #btn {
     padding: 0.5em 0.1em;
     width: 2.5em;
+    font-size: calc(.65rem + .71vmax);
 }
 
 #add {

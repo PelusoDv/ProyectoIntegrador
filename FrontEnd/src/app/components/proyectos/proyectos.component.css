@@ -19,6 +19,12 @@
     #img-highRes {
         display: none;
     }
+    #name {
+        width: 35%;
+    }
+    #desc {
+        width: 65% !important;
+    }
 }
 
 #img-lowRes {
@@ -36,8 +42,10 @@
 
 #desc {
     width: 50%;
-    min-width: 200px;
+    min-width: 175px;
+    font-size: calc(0.65rem + .7vmax);
 }
+
 @media (max-width: 575px) {
     #img {
         width: 8em;
@@ -56,6 +64,14 @@ img {
 
 table {
     margin-left: 1em;
+}
+
+h4 {
+    font-size: calc(0.3rem + 2.25vmax);
+}
+
+h5 {
+    font-size: calc(0.4rem + 1.5vmax);
 }
 
 #btn {
