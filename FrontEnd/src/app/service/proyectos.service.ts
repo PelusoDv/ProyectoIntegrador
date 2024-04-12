@@ -7,7 +7,7 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-  URL = 'https://proyectointegrador-production.up.railway.app/proy';
+  URL = 'https://portfoliobackend-7dlj.onrender.com/proy';
 
   constructor(private http: HttpClient) { }
 

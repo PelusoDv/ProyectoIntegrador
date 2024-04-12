@@ -7,7 +7,7 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'https://proyectointegrador-production.up.railway.app/persona';
+  URL = 'https://portfoliobackend-7dlj.onrender.com//persona';
 
   constructor(private http: HttpClient) { }
 

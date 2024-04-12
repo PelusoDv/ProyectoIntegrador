@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = "https://proyectointegrador-production.up.railway.app/auth/";
+  authURL = "https://portfoliobackend-7dlj.onrender.com/auth/";
 
   constructor(private httpClient: HttpClient) { }
 
