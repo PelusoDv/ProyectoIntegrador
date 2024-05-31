@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.Portfolio.DavKol.NicolasAlfredoApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.504 s - in com.Portfolio.DavKol.NicolasAlfredoApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.325 s - in com.Portfolio.DavKol.NicolasAlfredoApplicationTests
