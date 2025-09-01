@@ -61,8 +61,5 @@
                 <goal>clean</goal>
                 <goal>install</goal>
             </goals>
-            <properties>
-                <skipTests>true</skipTests>
-            </properties>
         </action>
     </actions>
