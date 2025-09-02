@@ -26,12 +26,14 @@
     transition: border-radius 1.2s;
     margin: 15px 0;
     box-shadow: 5px 5px 5px darkgrey;
+    aspect-ratio: 10/11;
 }
 
 @media (max-width: 425px) {
     #profile {
         border-radius: 40%;
         transition: border-radius 0.8s;
+        aspect-ratio: 10/12;
     }
     .col-4 {
         position: relative;
@@ -43,6 +45,7 @@
     #profile {
         border-radius: 20%;
         transition: border-radius 0.8s;
+        aspect-ratio: 10/12;
     }
 }
 
