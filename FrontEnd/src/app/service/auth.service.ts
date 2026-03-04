@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = "https://portfoliobackend-7dlj.onrender.com/auth/";
+  authURL = "https://apiweb--portfolioback--rw6clp2c9lc2.code.run/auth/";
 
   constructor(private httpClient: HttpClient) { }
 

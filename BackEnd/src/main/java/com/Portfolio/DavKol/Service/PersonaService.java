@@ -4,7 +4,7 @@ package com.Portfolio.DavKol.Service;
 import com.Portfolio.DavKol.Entity.Persona;
 import com.Portfolio.DavKol.Repository.IPersonaRepository;
 import java.util.Optional;
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

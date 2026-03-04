@@ -7,7 +7,7 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-  URL = 'https://portfoliobackend-7dlj.onrender.com/proy';
+  URL = 'https://apiweb--portfolioback--rw6clp2c9lc2.code.run/proy';
 
   constructor(private http: HttpClient) { }
 

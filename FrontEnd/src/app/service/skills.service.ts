@@ -7,7 +7,7 @@ import { Skills } from '../model/skills';
   providedIn: 'root'
 })
 export class SkillsService {
-  URL = 'https://portfoliobackend-7dlj.onrender.com/skill';
+  URL = 'https://apiweb--portfolioback--rw6clp2c9lc2.code.run/skill';
 
   constructor(private http: HttpClient) { }
 

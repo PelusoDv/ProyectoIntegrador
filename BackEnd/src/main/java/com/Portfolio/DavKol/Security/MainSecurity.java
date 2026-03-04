@@ -50,14 +50,14 @@ public class MainSecurity {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         //Desactivamos cookies ya que enviamos un token
             // cada vez que hacemos una petición
-        http.cors().and().csrf().disable()
-                .authorizeRequests()
-                .antMatchers("**").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
-                .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        http
+            .csrf(csrf -> csrf.disable()) // ❌ .disable() directo está deprecado
+            .cors(cors -> {}) 
+            .authorizeHttpRequests(auth -> auth
+            .requestMatchers("/**").permitAll() // reemplaza antMatchers
+            .anyRequest().authenticated())
+            .exceptionHandling(ex -> ex.authenticationEntryPoint(jwtEntryPoint))
+            .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
